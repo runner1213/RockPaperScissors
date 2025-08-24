@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ru.runner1213</groupId>
   <artifactId>RockPaperScissors</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1</version>
   <build>
     <plugins>
       <plugin>
@@ -16,7 +16,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.cats.Main</mainClass>
+              <mainClass>ru.runner1213.Main</mainClass>
             </manifest>
           </archive>
         </configuration>

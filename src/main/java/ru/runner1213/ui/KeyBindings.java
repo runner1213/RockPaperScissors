@@ -22,31 +22,21 @@ public class KeyBindings {
         actionMap = panel.getActionMap();
     }
     protected void setupButtonSelection() {
+        bindKeyToButton("1", list.rock);
+        bindKeyToButton("2", list.scissors);
+        bindKeyToButton("3", list.paper);
+    }
 
-        inputMap.put(KeyStroke.getKeyStroke("1"), "rock");
-        actionMap.put("rock", new AbstractAction() {
+    private void bindKeyToButton(String key, JButton button) {
+        inputMap.put(KeyStroke.getKeyStroke(key), key);
+        actionMap.put(key, new AbstractAction() {
             @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                list.rock.doClick();
-            }
-        });
-
-        inputMap.put(KeyStroke.getKeyStroke("2"), "scissors");
-        actionMap.put("scissors", new AbstractAction() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                list.scissors.doClick();
-            }
-        });
-
-        inputMap.put(KeyStroke.getKeyStroke("3"), "paper");
-        actionMap.put("paper", new AbstractAction() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                list.paper.doClick();
+            public void actionPerformed(ActionEvent e) {
+                button.doClick();
             }
         });
     }
+
     protected void setupBindReset() {
         inputMap.put(KeyStroke.getKeyStroke("R"), "reset");
         actionMap.put("reset", new AbstractAction() {
